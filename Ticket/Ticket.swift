@@ -21,7 +21,7 @@ public class Ticket {
     
     let fee: Double
     
-    init(fee: Double) {
+    public init(fee: Double) {
         self.fee = fee
     }
 }
@@ -67,10 +67,21 @@ public class Bag {
 
 public class Audience {
     
-    public var bag: Bag
+    private let bag: Bag
     
     init(bag: Bag) {
         self.bag = bag
+    }
+    
+    func buy(ticket: Ticket) -> Double {
+        if bag.hasInvitation {
+            bag.setTicket(ticket)
+            return 0
+        } else {
+            bag.setTicket(ticket)
+            bag.minusAmount(ticket.fee)
+            return ticket.fee
+        }
     }
 }
 
@@ -99,27 +110,26 @@ public class TicketOffice {
 
 public class TicketSeller {
     
-    var ticketOffice: TicketOffice
+    private let ticketOffice: TicketOffice
     
-    init(ticketOffice: TicketOffice) {
+    public init(ticketOffice: TicketOffice) {
         self.ticketOffice = ticketOffice
+    }
+    
+    public func sell(to audience: Audience) {
+        ticketOffice.plusAmount(audience.buy(ticket: ticketOffice.getTicket()))
     }
 }
 
 public class Theater {
     
-    private var ticketSeller: TicketSeller
+    private let ticketSeller: TicketSeller
     
-    init(ticketSeller: TicketSeller) {
+    public init(ticketSeller: TicketSeller) {
         self.ticketSeller = ticketSeller
     }
     
     public func enter(audience: Audience) {
-        let ticket = ticketSeller.ticketOffice.getTicket()
-        if !audience.bag.hasInvitation {
-            audience.bag.minusAmount(ticket.fee)
-            ticketSeller.ticketOffice.plusAmount(ticket.fee)
-        }
-        audience.bag.setTicket(ticket)
+        ticketSeller.sell(to: audience)
     }
 }
