@@ -32,11 +32,11 @@ public class Bag {
     private let invitation: Invitation?
     private var ticket: Ticket?
     
-    public var hasInvitation: Bool {
+    private var hasInvitation: Bool {
         return invitation != nil
     }
     
-    public var hasTicket: Bool {
+    private var hasTicket: Bool {
         return ticket != nil
     }
     
@@ -52,15 +52,26 @@ public class Bag {
         self.ticket = nil
     }
     
-    public func setTicket(_ ticket: Ticket) {
+    public func hold(_ ticket: Ticket) -> Double {
+        if hasInvitation {
+            setTicket(ticket)
+            return 0
+        } else {
+            setTicket(ticket)
+            minusAmount(ticket.fee)
+            return ticket.fee
+        }
+    }
+    
+    private func setTicket(_ ticket: Ticket) {
         self.ticket = ticket
     }
     
-    public func minusAmount(_ amount: Double) {
+    private func minusAmount(_ amount: Double) {
         self.amount -= amount
     }
     
-    public func plusAmount(_ amount: Double) {
+    private func plusAmount(_ amount: Double) {
         self.amount += amount
     }
 }
@@ -69,19 +80,12 @@ public class Audience {
     
     private let bag: Bag
     
-    init(bag: Bag) {
+    public init(bag: Bag) {
         self.bag = bag
     }
     
-    func buy(ticket: Ticket) -> Double {
-        if bag.hasInvitation {
-            bag.setTicket(ticket)
-            return 0
-        } else {
-            bag.setTicket(ticket)
-            bag.minusAmount(ticket.fee)
-            return ticket.fee
-        }
+    public func buy(ticket: Ticket) -> Double {
+        return bag.hold(ticket)
     }
 }
 
@@ -90,20 +94,24 @@ public class TicketOffice {
     private var amount: Double
     private var tickets = [Ticket]()
     
-    init(amount: Double, tickets: [Ticket]) {
+    public init(amount: Double, tickets: [Ticket]) {
         self.amount = amount
         self.tickets = tickets
     }
+    
+    public func sellTicket(to audience: Audience) {
+        plusAmount(audience.buy(ticket: getTicket()))
+    }
 
-    public func getTicket() -> Ticket {
+    private func getTicket() -> Ticket {
         return tickets.remove(at: 0)
     }
     
-    public func minusAmount(_ amount: Double) {
+    private func minusAmount(_ amount: Double) {
         self.amount -= amount
     }
     
-    public func plusAmount(_ amount: Double) {
+    private func plusAmount(_ amount: Double) {
         self.amount += amount
     }
 }
@@ -117,7 +125,7 @@ public class TicketSeller {
     }
     
     public func sell(to audience: Audience) {
-        ticketOffice.plusAmount(audience.buy(ticket: ticketOffice.getTicket()))
+        ticketOffice.sellTicket(to: audience)
     }
 }
 
