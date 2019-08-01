@@ -16,6 +16,10 @@
 		CE8D454D22EDD912000384E6 /* Ticket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8D454622EDD912000384E6 /* Ticket.framework */; };
 		CE8D454E22EDD912000384E6 /* Ticket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE8D454622EDD912000384E6 /* Ticket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE8D455422EDD91C000384E6 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D455322EDD91C000384E6 /* Ticket.swift */; };
+		CEFDD2D522F26CB600A383EF /* Movie.h in Headers */ = {isa = PBXBuildFile; fileRef = CEFDD2D322F26CB600A383EF /* Movie.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEFDD2D822F26CB600A383EF /* Movie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEFDD2D122F26CB500A383EF /* Movie.framework */; };
+		CEFDD2D922F26CB600A383EF /* Movie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEFDD2D122F26CB500A383EF /* Movie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEFDD2DE22F26CC000A383EF /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFDD2DD22F26CC000A383EF /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +29,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = CE8D454522EDD912000384E6;
 			remoteInfo = Ticket;
+		};
+		CEFDD2D622F26CB600A383EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE8D452322EDD54D000384E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEFDD2D022F26CB500A383EF;
+			remoteInfo = Movie;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -36,6 +47,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				CE8D454E22EDD912000384E6 /* Ticket.framework in Embed Frameworks */,
+				CEFDD2D922F26CB600A383EF /* Movie.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,6 +66,10 @@
 		CE8D454822EDD912000384E6 /* Ticket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ticket.h; sourceTree = "<group>"; };
 		CE8D454922EDD912000384E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE8D455322EDD91C000384E6 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
+		CEFDD2D122F26CB500A383EF /* Movie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Movie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEFDD2D322F26CB600A383EF /* Movie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		CEFDD2D422F26CB600A383EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEFDD2DD22F26CC000A383EF /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +78,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE8D454D22EDD912000384E6 /* Ticket.framework in Frameworks */,
+				CEFDD2D822F26CB600A383EF /* Movie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CE8D454322EDD912000384E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEFDD2CE22F26CB500A383EF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -80,6 +104,7 @@
 			children = (
 				CE8D452D22EDD54D000384E6 /* OOP_Programming */,
 				CE8D454722EDD912000384E6 /* Ticket */,
+				CEFDD2D222F26CB600A383EF /* Movie */,
 				CE8D452C22EDD54D000384E6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,6 +114,7 @@
 			children = (
 				CE8D452B22EDD54D000384E6 /* OOP_Programming.app */,
 				CE8D454622EDD912000384E6 /* Ticket.framework */,
+				CEFDD2D122F26CB500A383EF /* Movie.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,6 +142,16 @@
 			path = Ticket;
 			sourceTree = "<group>";
 		};
+		CEFDD2D222F26CB600A383EF /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				CEFDD2DD22F26CC000A383EF /* Movie.swift */,
+				CEFDD2D322F26CB600A383EF /* Movie.h */,
+				CEFDD2D422F26CB600A383EF /* Info.plist */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -124,6 +160,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE8D454A22EDD912000384E6 /* Ticket.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEFDD2CC22F26CB500A383EF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEFDD2D522F26CB600A383EF /* Movie.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +187,7 @@
 			);
 			dependencies = (
 				CE8D454C22EDD912000384E6 /* PBXTargetDependency */,
+				CEFDD2D722F26CB600A383EF /* PBXTargetDependency */,
 			);
 			name = OOP_Programming;
 			productName = OOP_Programming;
@@ -167,6 +212,24 @@
 			productReference = CE8D454622EDD912000384E6 /* Ticket.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		CEFDD2D022F26CB500A383EF /* Movie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEFDD2DC22F26CB600A383EF /* Build configuration list for PBXNativeTarget "Movie" */;
+			buildPhases = (
+				CEFDD2CC22F26CB500A383EF /* Headers */,
+				CEFDD2CD22F26CB500A383EF /* Sources */,
+				CEFDD2CE22F26CB500A383EF /* Frameworks */,
+				CEFDD2CF22F26CB500A383EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Movie;
+			productName = Movie;
+			productReference = CEFDD2D122F26CB500A383EF /* Movie.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -181,6 +244,10 @@
 						CreatedOnToolsVersion = 10.2;
 					};
 					CE8D454522EDD912000384E6 = {
+						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
+					};
+					CEFDD2D022F26CB500A383EF = {
 						CreatedOnToolsVersion = 10.2;
 						LastSwiftMigration = 1020;
 					};
@@ -201,6 +268,7 @@
 			targets = (
 				CE8D452A22EDD54D000384E6 /* OOP_Programming */,
 				CE8D454522EDD912000384E6 /* Ticket */,
+				CEFDD2D022F26CB500A383EF /* Movie */,
 			);
 		};
 /* End PBXProject section */
@@ -217,6 +285,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CE8D454422EDD912000384E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEFDD2CF22F26CB500A383EF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -243,6 +318,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CEFDD2CD22F26CB500A383EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEFDD2DE22F26CC000A383EF /* Movie.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -250,6 +333,11 @@
 			isa = PBXTargetDependency;
 			target = CE8D454522EDD912000384E6 /* Ticket */;
 			targetProxy = CE8D454B22EDD912000384E6 /* PBXContainerItemProxy */;
+		};
+		CEFDD2D722F26CB600A383EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEFDD2D022F26CB500A383EF /* Movie */;
+			targetProxy = CEFDD2D622F26CB600A383EF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -486,6 +574,65 @@
 			};
 			name = Release;
 		};
+		CEFDD2DA22F26CB600A383EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QQ553UUGK3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Movie/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ben.Movie;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CEFDD2DB22F26CB600A383EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QQ553UUGK3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Movie/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ben.Movie;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -512,6 +659,15 @@
 			buildConfigurations = (
 				CE8D455022EDD912000384E6 /* Debug */,
 				CE8D455122EDD912000384E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEFDD2DC22F26CB600A383EF /* Build configuration list for PBXNativeTarget "Movie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEFDD2DA22F26CB600A383EF /* Debug */,
+				CEFDD2DB22F26CB600A383EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
