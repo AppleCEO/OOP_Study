@@ -162,6 +162,14 @@ public class PercentDiscountPolicy: DiscountPolicy {
     }
 }
 
+public class NoneDiscountPolicy: DiscountPolicy {
+
+    public var conditions: [DiscountCondition] = []
+    
+    public func getDiscountAmount(screening: Screening) -> Money {
+        return .zero
+    }
+}
 
 public protocol DiscountCondition {
     
