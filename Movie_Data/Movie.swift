@@ -107,4 +107,36 @@ class Customer {
     }
 }
 
-
+class ReservationAgency {
+    
+    func reserve(screening: Screening, customer: Customer, audienceCount: Int) -> Reservation {
+        let movie = screening.movie
+        var discountable = false
+        movie.discountConditions.forEach { condition in
+            switch condition.type {
+            case .period:
+                discountable = true // 날짜 비교 로직은 생략함
+            case .sequence:
+                discountable = condition.sequence == screening.sequence
+            }
+        }
+        
+        let fee: Money
+        if discountable {
+            let discountAmount: Money
+            switch movie.movieType {
+            case .amountDiscount:
+                discountAmount = movie.discountAmount
+            case .percentDiscount:
+                discountAmount = movie.fee.times(percent: movie.discountPercent)
+            case .none:
+                discountAmount = Money.zero
+            }
+            fee = movie.fee.minus(money: discountAmount).times(percent: Double(audienceCount))
+        } else {
+            fee = movie.fee
+        }
+        
+        return Reservation(customer: customer, screening: screening, fee: fee, audienceCount: audienceCount)
+    }
+}
