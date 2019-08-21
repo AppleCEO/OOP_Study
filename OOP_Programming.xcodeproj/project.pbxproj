@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE2DDD73230D8D5200F20563 /* Rectangle.h in Headers */ = {isa = PBXBuildFile; fileRef = CE2DDD71230D8D5200F20563 /* Rectangle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE2DDD76230D8D5200F20563 /* Rectangle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2DDD6F230D8D5200F20563 /* Rectangle.framework */; };
+		CE2DDD77230D8D5200F20563 /* Rectangle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE2DDD6F230D8D5200F20563 /* Rectangle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE2DDD7C230D8D5B00F20563 /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2DDD7B230D8D5B00F20563 /* Rectangle.swift */; };
 		CE8D452F22EDD54D000384E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D452E22EDD54D000384E6 /* AppDelegate.swift */; };
 		CE8D453122EDD54D000384E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D453022EDD54D000384E6 /* ViewController.swift */; };
 		CE8D453422EDD54D000384E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8D453222EDD54D000384E6 /* Main.storyboard */; };
@@ -27,6 +31,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CE2DDD74230D8D5200F20563 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE8D452322EDD54D000384E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE2DDD6E230D8D5200F20563;
+			remoteInfo = Rectangle;
+		};
 		CE8D454B22EDD912000384E6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CE8D452322EDD54D000384E6 /* Project object */;
@@ -57,6 +68,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				CE2DDD77230D8D5200F20563 /* Rectangle.framework in Embed Frameworks */,
 				CE8D454E22EDD912000384E6 /* Ticket.framework in Embed Frameworks */,
 				CEE74D7F2305A9130027DA59 /* Movie_Data.framework in Embed Frameworks */,
 				CEFDD2D922F26CB600A383EF /* Movie.framework in Embed Frameworks */,
@@ -67,6 +79,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE2DDD6F230D8D5200F20563 /* Rectangle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Rectangle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE2DDD71230D8D5200F20563 /* Rectangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rectangle.h; sourceTree = "<group>"; };
+		CE2DDD72230D8D5200F20563 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE2DDD7B230D8D5B00F20563 /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
 		CE8D452B22EDD54D000384E6 /* OOP_Programming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OOP_Programming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8D452E22EDD54D000384E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE8D453022EDD54D000384E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,10 +105,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CE2DDD6C230D8D5200F20563 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE8D452822EDD54D000384E6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE2DDD76230D8D5200F20563 /* Rectangle.framework in Frameworks */,
 				CE8D454D22EDD912000384E6 /* Ticket.framework in Frameworks */,
 				CEE74D7E2305A9130027DA59 /* Movie_Data.framework in Frameworks */,
 				CEFDD2D822F26CB600A383EF /* Movie.framework in Frameworks */,
@@ -123,6 +147,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE2DDD70230D8D5200F20563 /* Rectangle */ = {
+			isa = PBXGroup;
+			children = (
+				CE2DDD7B230D8D5B00F20563 /* Rectangle.swift */,
+				CE2DDD71230D8D5200F20563 /* Rectangle.h */,
+				CE2DDD72230D8D5200F20563 /* Info.plist */,
+			);
+			path = Rectangle;
+			sourceTree = "<group>";
+		};
 		CE8D452222EDD54D000384E6 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +164,7 @@
 				CE8D454722EDD912000384E6 /* Ticket */,
 				CEFDD2D222F26CB600A383EF /* Movie */,
 				CEE74D782305A9130027DA59 /* Movie_Data */,
+				CE2DDD70230D8D5200F20563 /* Rectangle */,
 				CE8D452C22EDD54D000384E6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -141,6 +176,7 @@
 				CE8D454622EDD912000384E6 /* Ticket.framework */,
 				CEFDD2D122F26CB500A383EF /* Movie.framework */,
 				CEE74D772305A9130027DA59 /* Movie_Data.framework */,
+				CE2DDD6F230D8D5200F20563 /* Rectangle.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -191,6 +227,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		CE2DDD6A230D8D5200F20563 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE2DDD73230D8D5200F20563 /* Rectangle.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE8D454122EDD912000384E6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -218,6 +262,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		CE2DDD6E230D8D5200F20563 /* Rectangle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE2DDD7A230D8D5200F20563 /* Build configuration list for PBXNativeTarget "Rectangle" */;
+			buildPhases = (
+				CE2DDD6A230D8D5200F20563 /* Headers */,
+				CE2DDD6B230D8D5200F20563 /* Sources */,
+				CE2DDD6C230D8D5200F20563 /* Frameworks */,
+				CE2DDD6D230D8D5200F20563 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rectangle;
+			productName = Rectangle;
+			productReference = CE2DDD6F230D8D5200F20563 /* Rectangle.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		CE8D452A22EDD54D000384E6 /* OOP_Programming */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE8D453D22EDD54E000384E6 /* Build configuration list for PBXNativeTarget "OOP_Programming" */;
@@ -233,6 +295,7 @@
 				CE8D454C22EDD912000384E6 /* PBXTargetDependency */,
 				CEFDD2D722F26CB600A383EF /* PBXTargetDependency */,
 				CEE74D7D2305A9130027DA59 /* PBXTargetDependency */,
+				CE2DDD75230D8D5200F20563 /* PBXTargetDependency */,
 			);
 			name = OOP_Programming;
 			productName = OOP_Programming;
@@ -303,6 +366,10 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = Ben;
 				TargetAttributes = {
+					CE2DDD6E230D8D5200F20563 = {
+						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
+					};
 					CE8D452A22EDD54D000384E6 = {
 						CreatedOnToolsVersion = 10.2;
 					};
@@ -337,11 +404,19 @@
 				CE8D454522EDD912000384E6 /* Ticket */,
 				CEFDD2D022F26CB500A383EF /* Movie */,
 				CEE74D762305A9130027DA59 /* Movie_Data */,
+				CE2DDD6E230D8D5200F20563 /* Rectangle */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CE2DDD6D230D8D5200F20563 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE8D452922EDD54D000384E6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -376,6 +451,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CE2DDD6B230D8D5200F20563 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE2DDD7C230D8D5B00F20563 /* Rectangle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE8D452722EDD54D000384E6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -412,6 +495,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CE2DDD75230D8D5200F20563 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE2DDD6E230D8D5200F20563 /* Rectangle */;
+			targetProxy = CE2DDD74230D8D5200F20563 /* PBXContainerItemProxy */;
+		};
 		CE8D454C22EDD912000384E6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CE8D454522EDD912000384E6 /* Ticket */;
@@ -449,6 +537,65 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CE2DDD78230D8D5200F20563 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QQ553UUGK3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Rectangle/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ben.Rectangle;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CE2DDD79230D8D5200F20563 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QQ553UUGK3;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Rectangle/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ben.Rectangle;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		CE8D453B22EDD54E000384E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -783,6 +930,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CE2DDD7A230D8D5200F20563 /* Build configuration list for PBXNativeTarget "Rectangle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE2DDD78230D8D5200F20563 /* Debug */,
+				CE2DDD79230D8D5200F20563 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CE8D452622EDD54D000384E6 /* Build configuration list for PBXProject "OOP_Programming" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
