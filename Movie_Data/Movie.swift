@@ -63,6 +63,7 @@ class Movie {
     private var discountAmount: Money = Money()
     private var discountPercent: Double = 0.0
     
+    // 여기 아래 함수들도 마찬가지로 함수를 통해 할인 정책에는 금액 할인 정책, 비율 할인 정책, 미적용 세가지가 존재하는 걸 외부에 노출시킴
     func calculateAmountDiscountedFee() -> Money {
         switch movieType {
         case .amountDiscount:
@@ -114,6 +115,7 @@ class DiscountCondition {
     private var startTime: Date = Date()
     private var endTime: Date = Date()
     
+    // 이 함수는 dayOfWeek, time 두개의 파라미터를 사용함으로서 내부적으로 시간정보가 프로퍼티로 포함돼 있다는 사실을 인터페이스를 통해 외부에 노출하고 있음
     func isDiscountable(dayOfWeek: Date, time: Date) -> Bool {
         switch type {
         case .period: return false
@@ -121,6 +123,7 @@ class DiscountCondition {
         }
     }
     
+    // 이 함수 또한 sequence를 파라미터로 받으면서 내부적으로 순번 정보를 포함하고 있는 사실을 외부에 노출함
     func isDiscountable(sequence: Int) -> Bool {
         switch type {
         case .period: return false
